@@ -23,6 +23,10 @@ your program would output 4—the number of ways to make 4¢ with those denomina
 function changePossibilities(amount, denominations){
   var results = [];
   var combination = [];
+  
+  if(denominations.length === 0){
+    return 0;
+  }
 
   var sortedDenominations = denominations.sort(function(a, b) {
     return a - b;
